@@ -59,6 +59,10 @@ class Orderlist extends React.Component {
     this.setState({ content });
   }
 
+  _exploreProduct = (value) => {
+    window.top.location.href = value;
+  }
+  
   handleArticleTitle = (title) => {
     this.setState({ title });
   }
