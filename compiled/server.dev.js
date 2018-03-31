@@ -85,11 +85,11 @@ var SCOPES = exports.SCOPES = 'read_orders,read_products, read_content, write_co
 var ACTIVATE_CHARGE_ROUTE = exports.ACTIVATE_CHARGE_ROUTE = '/activate_charge';
 
 /* export const APP_NAME = 'testapp999'; //Live */
-var APP_NAME = exports.APP_NAME = 'testapp999'; //Local dev
+var APP_NAME = exports.APP_NAME = 'testapp9999'; //Local dev
 /* export const APP_NAME = 'devapp999'; //local live */
 
 /* export const APP_URL = 'https://artcontent.herokuapp.com';Live */
-var APP_URL = exports.APP_URL = 'https://2bb62ebf.ngrok.io'; //Local dev
+var APP_URL = exports.APP_URL = 'https://contentart.herokuapp.com'; //Local dev
 
 /* export const APP_URL = 'https://84c4484d.ngrok.io'; //local live */
 
