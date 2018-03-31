@@ -85,11 +85,11 @@ var SCOPES = exports.SCOPES = 'read_orders,read_products, read_content, write_co
 var ACTIVATE_CHARGE_ROUTE = exports.ACTIVATE_CHARGE_ROUTE = '/activate_charge';
 
 /* export const APP_NAME = 'testapp999'; //Live */
-var APP_NAME = exports.APP_NAME = 'testapp9999'; //Local dev
+var APP_NAME = exports.APP_NAME = 'testapp999'; //Local dev
 /* export const APP_NAME = 'devapp999'; //local live */
 
-/* export const APP_URL = 'https://artcontent.herokuapp.com';Live */
-var APP_URL = exports.APP_URL = 'https://contentart.herokuapp.com'; //Local dev
+var APP_URL = exports.APP_URL = 'https://f138214e.ngrok.io';
+//export const APP_URL = 'https://contentart.herokuapp.com'; //Local dev
 
 /* export const APP_URL = 'https://84c4484d.ngrok.io'; //local live */
 
@@ -602,7 +602,7 @@ module.exports = require("sequelize");
 /* 23 */
 /***/ (function(module, exports) {
 
-module.exports = {"development":{"username":"postgres","password":"TechAdmin","database":"shopify-app-development","host":"127.0.0.1","dialect":"postgres"},"test":{"username":"postgres","password":"TechAdmin","database":"shopify-app-test","host":"127.0.0.1","dialect":"postgres","logging":false},"production":{"use_env_variable":"DATABASE_URL","username":"postgres","password":"TechAdmin","database":"shopify-app-production","host":"127.0.0.1","dialect":"postgres"}}
+module.exports = {"development":{"username":"postgres","password":"TechAdmin","database":"shopify-app-development","host":"127.0.0.1","dialect":"postgres"},"test":{"username":"postgres","password":"TechAdmin","database":"shopify-app-test","host":"127.0.0.1","dialect":"postgres","logging":false},"production":{"use_env_variable":"postgres://lscbefdvgkkhho:5d5e622a66aa9345ac0120284caca5f4351d3c024497c2a8cd031dc55709fbe7@ec2-23-21-121-220.compute-1.amazonaws.com:5432/d88e3905stiaec","username":"lscbefdvgkkhho","password":"5d5e622a66aa9345ac0120284caca5f4351d3c024497c2a8cd031dc55709fbe7","database":"d88e3905stiaec","host":"ec2-23-21-121-220.compute-1.amazonaws.com","dialect":"postgres"}}
 
 /***/ }),
 /* 24 */
@@ -736,7 +736,7 @@ var options = {
 
 var pgp = __webpack_require__(7)(options);
 
-var connectionString = 'postgres://postgres:TechAdmin@localhost/shopify-app-development';
+var connectionString = 'postgres://lscbefdvgkkhho:5d5e622a66aa9345ac0120284caca5f4351d3c024497c2a8cd031dc55709fbe7@ec2-23-21-121-220.compute-1.amazonaws.com/d88e3905stiaec';
 var pdb = pgp(connectionString);
 
 var Shop = _db.Models.Shop;

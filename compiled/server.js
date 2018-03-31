@@ -389,7 +389,7 @@ var options = {
 };
 
 var pgp = __webpack_require__(7)(options);
-var connectionString = 'postgres://postgres:TechAdmin@localhost/shopify-app-development';
+var connectionString = 'postgres://lscbefdvgkkhho:5d5e622a66aa9345ac0120284caca5f4351d3c024497c2a8cd031dc55709fbe7@ec2-23-21-121-220.compute-1.amazonaws.com/d88e3905stiaec';
 var pdb = pgp(connectionString);
 
 var SHOPIFY_API_KEY = process.env.SHOPIFY_API_KEY;
@@ -602,7 +602,7 @@ module.exports = require("sequelize");
 /* 23 */
 /***/ (function(module, exports) {
 
-module.exports = {"development":{"username":"postgres","password":"TechAdmin","database":"shopify-app-development","host":"127.0.0.1","dialect":"postgres"},"test":{"username":"postgres","password":"TechAdmin","database":"shopify-app-test","host":"127.0.0.1","dialect":"postgres","logging":false},"production":{"use_env_variable":"DATABASE_URL","username":"postgres","password":"TechAdmin","database":"shopify-app-production","host":"127.0.0.1","dialect":"postgres"}}
+module.exports = {"development":{"username":"postgres","password":"TechAdmin","database":"shopify-app-development","host":"127.0.0.1","dialect":"postgres"},"test":{"username":"postgres","password":"TechAdmin","database":"shopify-app-test","host":"127.0.0.1","dialect":"postgres","logging":false},"production":{"use_env_variable":"postgres://lscbefdvgkkhho:5d5e622a66aa9345ac0120284caca5f4351d3c024497c2a8cd031dc55709fbe7@ec2-23-21-121-220.compute-1.amazonaws.com:5432/d88e3905stiaec","username":"lscbefdvgkkhho","password":"5d5e622a66aa9345ac0120284caca5f4351d3c024497c2a8cd031dc55709fbe7","database":"d88e3905stiaec","host":"ec2-23-21-121-220.compute-1.amazonaws.com","dialect":"postgres"}}
 
 /***/ }),
 /* 24 */
@@ -734,12 +734,9 @@ var options = {
   }
 };
 
-var LocalStorage = require('node-localstorage').LocalStorage;
-var localStorage = new LocalStorage('./scratch');
-
 var pgp = __webpack_require__(7)(options);
 
-var connectionString = 'postgres://postgres:TechAdmin@localhost/shopify-app-development';
+var connectionString = 'postgres://lscbefdvgkkhho:5d5e622a66aa9345ac0120284caca5f4351d3c024497c2a8cd031dc55709fbe7@ec2-23-21-121-220.compute-1.amazonaws.com/d88e3905stiaec';
 var pdb = pgp(connectionString);
 
 var Shop = _db.Models.Shop;
@@ -1047,27 +1044,7 @@ exports.default = function () {
   });
 
   /*getAllRequest*/
-  router.get('/api/shopurl', function (req, res) {
-      console.log(localStorage.getItem('shopURL'));
-      var shopurl = localStorage.getItem('shopURL');
-      if(shopurl){
-        res.status(200).json({
-          status: 'success',
-          data: shopurl
-        });
-      }else{
-        res.status(500).json({
-          status: 'error',
-          message: err
-        });
-      }
-
-  });
-
-
   router.get('/api/getarticles', function (req, res) {
-
-    
 
     var shop = req.query.updateque;
     if (shop != 'all') {
@@ -1299,15 +1276,13 @@ exports.default = function () {
    */
   router.get(_config.AUTH_CALLBACK_ROUTE, function (req, res, next) {
 
+    console.log('Request: ' + req);
     var query = req.query,
         session = req.session;
     var code = query.code,
         shop = query.shop,
         state = query.state;
 
-        localStorage.setItem('shopURL', shop);
-        console.log(localStorage.getItem('shopURL'));
-        
     var shopifyToken = getShopifyToken();
 
     // Exchange the authorization code for a permanent access token.
