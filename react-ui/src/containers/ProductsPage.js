@@ -206,7 +206,6 @@ export class ProductsPageComponent extends Component<Props, OwnState> {
 
   render() {
 
-    console.log('Deepali 123');
     const { contenType } = this.state;
     const { products = [] } = this.props;
     const { resourcePickerOpen } = this.state;
