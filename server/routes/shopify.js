@@ -22,7 +22,7 @@ var options = {
 
 var pgp = require('pg-promise')(options);
 
-var connectionString = 'postgres://postgres:TechAdmin@localhost/shopify-app-development';
+var connectionString = 'postgres://lscbefdvgkkhho:5d5e622a66aa9345ac0120284caca5f4351d3c024497c2a8cd031dc55709fbe7@ec2-23-21-121-220.compute-1.amazonaws.com/d88e3905stiaec';
 var pdb = pgp(connectionString);
 
 
