@@ -89,7 +89,7 @@ export class ProductsPageComponent extends Component<Props, OwnState> {
         dataarr.push(temp_bundled);
 
         let dataarrd = JSON.stringify({ data: dataarr });
-        var apiBaseUrl = "https://contentart.herokuapp.com/api/newarticles";
+        var apiBaseUrl = "https://323f3aa0.ngrok.io/api/newarticles";
 
         const myInit = {
           method: 'POST',
