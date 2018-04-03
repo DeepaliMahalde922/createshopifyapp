@@ -102,7 +102,7 @@ class Adminorderlist extends React.Component {
     console.log('')
     var self = this;
 
-    var url = new URL("https://323f3aa0.ngrok.io/api/getarticles"),
+    var url = new URL("https://contentart.herokuapp.com/api/getarticles"),
         params = {updateque:'all'}
        
 

@@ -89,7 +89,7 @@ export class ProductsPageComponent extends Component<Props, OwnState> {
         dataarr.push(temp_bundled);
 
         let dataarrd = JSON.stringify({ data: dataarr });
-        var apiBaseUrl = "https://323f3aa0.ngrok.io/api/newarticles";
+        var apiBaseUrl = "https://contentart.herokuapp.com/api/newarticles";
 
         const myInit = {
           method: 'POST',
@@ -147,7 +147,7 @@ export class ProductsPageComponent extends Component<Props, OwnState> {
   handleGoTorder = () => {
     const { history } = this.props;
     
-    if(REACT_APP_SHOP_ORIGIN == 'test-account-13.myshopify.com'){
+    if(REACT_APP_SHOP_ORIGIN == 'admintestapp.myshopify.com'){
       history.push('/adminorderlist');
     }else{
       history.push('/orderlist');  

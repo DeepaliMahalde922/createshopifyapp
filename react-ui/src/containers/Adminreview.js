@@ -71,7 +71,7 @@ class Adminreview extends React.Component {
       });
 
       /*Fetch Request Article to show data*/
-      const blogapiUrl = "https://323f3aa0.ngrok.io/api/getsinglearticles/:"+requestid;
+      const blogapiUrl = "https://contentart.herokuapp.com/api/getsinglearticles/:"+requestid;
       const blogInit = {
         method: 'GET',
         headers: {
