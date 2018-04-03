@@ -8,7 +8,7 @@ export const SCOPES = 'read_orders,read_products, read_content, write_content';
 export const ACTIVATE_CHARGE_ROUTE = '/activate_charge';
 
 /* export const APP_NAME = 'testapp999'; //Live */
-export const APP_NAME = 'admintestapp'; //Local dev
+export const APP_NAME = 'testapp9999'; //Local dev
 /* export const APP_NAME = 'devapp999'; //local live */
 
 export const APP_URL = 'https://contentart.herokuapp.com'; //Local dev
